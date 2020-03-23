@@ -9,7 +9,7 @@
  * this starts the plugin.
  *
  * @link              http://example.com
- * @since             1.0.0
+ * @since             1.0.1
  * @package           AD_Google_Analytics
  *
  * @wordpress-plugin
