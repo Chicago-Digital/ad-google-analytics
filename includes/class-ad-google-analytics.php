@@ -69,7 +69,7 @@ class AD_Google_Analytics {
 	public function __construct() {
 
 		$this->plugin_name = 'ad-google-analytics';
-		$this->version = '1.0.2';
+		$this->version = '1.0.0';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -119,15 +119,6 @@ class AD_Google_Analytics {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-ad-google-analytics-public.php';
 
 		$this->loader = new AD_Google_Analytics_Loader();
-
-		/**
-		 * Private Plugin Update From GitHub
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'updater.php';
-		$updater = new AD_Google_Analytics_Updater( __FILE__ ); // Update to prefixed class name of plugin. Can't be the same as other plugin updaters
-		$updater->set_username('Chicago-Digital');
-		$updater->set_repository($this->plugin_name); // Repository should be same name as plugin
-		$updater->initialize();
 
 	}
 
