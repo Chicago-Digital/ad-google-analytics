@@ -31,6 +31,15 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
+ * Private Plugin Update From GitHub
+ */
+include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
+$updater = new AD_Google_Analytics_Updater( __FILE__ ); // Update to prefixed class name of plugin. Can't be the same as other plugin updaters
+$updater->set_username('Chicago-Digital');
+$updater->set_repository('ad-google-analytics'); // Repository should be same name as plugin
+$updater->initialize();
+
+/**
  * The code that runs during plugin activation.
  */
 require_once plugin_dir_path( __FILE__ ) . 'includes/class-ad-google-analytics-activator.php';
