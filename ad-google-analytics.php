@@ -17,7 +17,7 @@
  * Plugin URI:        https://www.antennagroup.com/
  * Description:       Antenna Digital stand-alone Google Analytics Plugin that works with Google Site Kit
  * Version:           1.0.0
- * Author:            https://www.antennagroup.com/
+ * Author:            Antenna Digital
  * Author URI:        https://www.antennagroup.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
