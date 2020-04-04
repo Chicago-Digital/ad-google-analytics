@@ -1,29 +1,14 @@
 <?php
 
-/**
- * Antenna Digital Google Analytics Plugin
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * Dashboard. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * this starts the plugin.
- *
- * @link              http://example.com
- * @since             1.0.0
- * @package           AD_Google_Analytics
- *
- * @wordpress-plugin
- * Plugin Name:       Antenna Digital Google Analytics
- * Plugin URI:        https://www.antennagroup.com/
- * Description:       Antenna Digital stand-alone Google Analytics Plugin that works with Google Site Kit
- * Version:           1.0.1
- * Author:            Antenna Digital
- * Author URI:        https://www.antennagroup.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       ad-google-analytics
- * Domain Path:       /languages
- */
+/*
+Plugin Name: Antenna Digital Google Analytics Plugin
+Plugin URI: https://www.antennagroup.com
+Version: 1.0.1
+Author: Antenna | Digital
+Author URI: https://wwww.antennagroup.com
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
