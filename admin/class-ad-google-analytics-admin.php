@@ -250,12 +250,13 @@ class AD_Google_Analytics_Admin {
 	public function ad_remove_wp_dashboard(){
 		$options = get_option( 'ad_ga_settings' );
 
-		if (!is_plugin_active( 'google-site-kit/google-site-kit.php' ) || !isset($options['ad_google_site_kit_dashboard'])  ) {
+		if (!is_plugin_active( 'google-site-kit/google-site-kit.php' ) || !isset($options['ad_google_site_kit_dashboard']) || !current_user_can( 'googlesitekit_view_dashboard' ) ) {
 			return;
 		}
 		if ( preg_match( '#wp-admin/?(index.php)?$#', $_SERVER['REQUEST_URI'] ) && ( 'index.php' != $menu[$page][2] ) ) {
 			wp_redirect( get_option( 'siteurl' ) . '/wp-admin/admin.php?page=googlesitekit-dashboard');
 		}
+
 	}
 
 	/**
@@ -266,7 +267,7 @@ class AD_Google_Analytics_Admin {
 	public function ad_login_dashboard_redirect($url) {
 		$options = get_option( 'ad_ga_settings' );
 
-		if (is_plugin_active( 'google-site-kit/google-site-kit.php' ) && isset($options['ad_google_site_kit_dashboard'])) {
+		if (is_plugin_active( 'google-site-kit/google-site-kit.php' ) && isset($options['ad_google_site_kit_dashboard']) && current_user_can( 'googlesitekit_view_dashboard' )) {
 			$url = esc_url( admin_url( 'admin.php?page=googlesitekit-dashboard' ) );
 		}
 		return $url;

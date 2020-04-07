@@ -69,7 +69,7 @@ class AD_Google_Analytics {
 	public function __construct() {
 
 		$this->plugin_name = 'ad-google-analytics';
-		$this->version = '1.0.2';
+		$this->version = '1.0.3';
 
 		$this->load_dependencies();
 		$this->set_locale();
